@@ -39,7 +39,7 @@ public class Restcontroller {
 		return ser.updateContact(contactlist);
 	}
 		
-	@RequestMapping(value="/deleteContactById/{contactId}",method = RequestMethod.DELETE)
+	@RequestMapping(value="/delete/{contactId}",method = RequestMethod.DELETE)
 	public String deleteContactById(@PathVariable Integer contactId) {
 		return ser.deleteContactById(contactId);
 		
