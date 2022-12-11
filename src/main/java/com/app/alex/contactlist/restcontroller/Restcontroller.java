@@ -29,7 +29,7 @@ public class Restcontroller {
 	public List<Contactlist> getAllContacts(){
 		return ser.getAllContacts();
 	}
-	@RequestMapping(value="/get{contactId}",method = RequestMethod.GET)
+	@RequestMapping(value="/get/{contactId}",method = RequestMethod.GET)
 	public Contactlist getContactById(@PathVariable Integer contactId){
 		return ser.getContactById(contactId);
 	}
@@ -39,7 +39,7 @@ public class Restcontroller {
 		return ser.updateContact(contactlist);
 	}
 		
-	@RequestMapping(value="/deleteContactById",method = RequestMethod.DELETE)
+	@RequestMapping(value="/deleteContactById/{contactId}",method = RequestMethod.DELETE)
 	public String deleteContactById(@PathVariable Integer contactId) {
 		return ser.deleteContactById(contactId);
 		
