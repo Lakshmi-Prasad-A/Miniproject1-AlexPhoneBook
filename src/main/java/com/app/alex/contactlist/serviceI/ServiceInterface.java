@@ -11,11 +11,11 @@ public interface ServiceInterface {
 	
 	public List<Contactlist> getAllContacts();
 	
-	public Optional<Contactlist> getContactById(Integer contactId);
+	public Contactlist getContactById(Integer contactId);
 	
 	public String updateContact (Contactlist contactlist);
 	
-	public List<Contactlist> deleteContactById(Integer contactId);
+	public String deleteContactById(Integer contactId);
 		
 	
 }

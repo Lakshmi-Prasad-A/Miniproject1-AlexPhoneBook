@@ -14,7 +14,7 @@ import com.app.alex.contactlist.entity.Contactlist;
 import com.app.alex.contactlist.serviceI.ServiceInterface;
 
 @RestController
-@RequestMapping(value="/api/vi.0/contactlist")
+@RequestMapping(value="/v1/api/contactlist")
 public class Restcontroller {
 
 	@Autowired
@@ -22,7 +22,6 @@ public class Restcontroller {
 	
 	@RequestMapping(value="/saved",method = RequestMethod.POST)
 	public String saveContact(@RequestBody Contactlist contactlist) {
-		System.out.println("Your Contact is successfully created");
 		return ser.saveContact(contactlist);
 	}
 	
@@ -31,7 +30,7 @@ public class Restcontroller {
 		return ser.getAllContacts();
 	}
 	@RequestMapping(value="/get{contactId}",method = RequestMethod.GET)
-	public Optional<Contactlist> getContactById(@PathVariable Integer contactId){
+	public Contactlist getContactById(@PathVariable Integer contactId){
 		return ser.getContactById(contactId);
 	}
 	
@@ -41,7 +40,7 @@ public class Restcontroller {
 	}
 		
 	@RequestMapping(value="/deleteContactById",method = RequestMethod.DELETE)
-	public List<Contactlist> deleteContactById(@PathVariable Integer contactId) {
+	public String deleteContactById(@PathVariable Integer contactId) {
 		return ser.deleteContactById(contactId);
 		
 	}
