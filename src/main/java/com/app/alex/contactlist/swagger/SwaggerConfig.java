@@ -29,10 +29,5 @@ public class SwaggerConfig {
 				/*.apiInfo(apiInfo());*/
 	}
 
-	/*
-	 * private ApiInfo apiInfo() { return new ApiInfo("STUDENT APP", "SAMPLE APP",
-	 * "3.2GA", "http://sample.com", new Contact("RAGHU",
-	 * "http://github.com/javabyraghu", "javabyraghu@gmail.com"), "APACHE",
-	 * "http://apache.com", Collections.emptyList()); }
-	 */
+
 }
