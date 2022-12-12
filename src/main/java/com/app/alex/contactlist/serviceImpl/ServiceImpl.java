@@ -56,7 +56,7 @@ public class ServiceImpl implements ServiceInterface {
 
 	@Override
 	public String deleteContactById(Integer contactId) {
-		System.out.println(repo.existsById(contactId));
+		
 		if(repo.existsById(contactId)) {
 			repo.deleteById(contactId);
 			return "Record Deleted";
